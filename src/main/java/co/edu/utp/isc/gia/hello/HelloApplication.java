@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HelloApplication.class, args);
+            SpringApplication.run(HelloApplication.class, args);
 	}
         
         @GetMapping("/{firstName}/{lastName}")
@@ -24,7 +24,7 @@ public class HelloApplication {
             return String.format("Hello %s %s", firstName, lastName);
         }
         
-        @GetMapping("/ensayo")
+        @GetMapping("/hello2")
         public String sayHello2(@RequestParam("nombre") String nombre, @RequestParam("apellido") String apellido){
             return String.format("Hello %s %s", nombre, apellido);
         }
